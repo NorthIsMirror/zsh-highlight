@@ -85,6 +85,7 @@ CORE_OBJECTS:=stylecolour.o stringtools.o \
 	xhtmlgenerator.o latexgenerator.o texgenerator.o rtfgenerator.o \
 	htmlgenerator.o ansigenerator.o svggenerator.o codegenerator.o \
 	xterm256generator.o pangogenerator.o bbcodegenerator.o odtgenerator.o\
+	zshgenerator.o \
 	syntaxreader.o elementstyle.o themereader.o \
 	datadir.o preformatter.o platform_fs.o\
 	ASStreamIterator.o ASResource.o ASFormatter.o ASBeautifier.o ASEnhancer.o
@@ -176,6 +177,9 @@ svggenerator.o: ${CORE_DIR}svggenerator.cpp ${INCLUDE_DIR}svggenerator.h ${INCLU
 
 xterm256generator.o: ${CORE_DIR}xterm256generator.cpp ${INCLUDE_DIR}xterm256generator.h ${INCLUDE_DIR}codegenerator.h
 	${CXX_COMPILE} ${CORE_DIR}xterm256generator.cpp
+
+zshgenerator.o: ${CORE_DIR}zshgenerator.cpp ${INCLUDE_DIR}zshgenerator.h ${INCLUDE_DIR}codegenerator.h
+	${CXX_COMPILE} ${CORE_DIR}zshgenerator.cpp
 
 preformatter.o: ${CORE_DIR}preformatter.cpp ${INCLUDE_DIR}preformatter.h ${INCLUDE_DIR}stringtools.h
 	${CXX_COMPILE} ${CORE_DIR}preformatter.cpp

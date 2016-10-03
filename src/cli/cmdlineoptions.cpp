@@ -208,6 +208,8 @@ CmdLineOptions::CmdLineOptions ( const int argc, const char *argv[] ) :
                 outputType = highlight::ESC_XTERM256;
             else if ( tmp == "truecolor" )
                 outputType = highlight::ESC_TRUECOLOR;
+            else if ( tmp == "zsh" )
+                outputType = highlight::ZSH;
             else if ( tmp == "svg" )
                 outputType = highlight::SVG;
             else if ( tmp == "bbcode" )

@@ -46,6 +46,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #if !defined (QT)
 #include "ansigenerator.h"
 #include "xterm256generator.h"
+#include "zshgenerator.h"
 #endif
 
 namespace highlight
@@ -103,6 +104,9 @@ CodeGenerator * CodeGenerator::getInstance ( OutputType type )
     case ESC_TRUECOLOR:
         generator = new Xterm256Generator();
         generator->setESCTrueColor(type==ESC_TRUECOLOR);
+        break;
+    case ZSH:
+        generator = new ZshGenerator();
         break;
 #endif
     default:

@@ -99,7 +99,8 @@ enum OutputType {
     BBCODE,
     PANGO,
     ODTFLAT,
-    ESC_TRUECOLOR
+    ESC_TRUECOLOR,
+    ZSH
 };
 
 }
